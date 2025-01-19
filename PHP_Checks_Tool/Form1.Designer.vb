@@ -24,19 +24,25 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.btnPHPStan = New System.Windows.Forms.Button()
         Me.btnPHPCS = New System.Windows.Forms.Button()
-        Me.btnStatus = New System.Windows.Forms.Button()
-        Me.btnPHPStanCommit = New System.Windows.Forms.Button()
-        Me.btnPHPCSCommit = New System.Windows.Forms.Button()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnSelectDir = New System.Windows.Forms.Button()
-        Me.txtDirectory = New System.Windows.Forms.TextBox()
         Me.rtbConsole = New System.Windows.Forms.RichTextBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.GitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PHPStanCommitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PHPCSCommitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdvancedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PHPStanCheckerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PHPCodeSnifferToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnPHPStan
         '
-        Me.btnPHPStan.Location = New System.Drawing.Point(12, 12)
+        Me.btnPHPStan.Location = New System.Drawing.Point(12, 27)
         Me.btnPHPStan.Name = "btnPHPStan"
         Me.btnPHPStan.Size = New System.Drawing.Size(75, 23)
         Me.btnPHPStan.TabIndex = 0
@@ -45,63 +51,12 @@ Partial Class Form1
         '
         'btnPHPCS
         '
-        Me.btnPHPCS.Location = New System.Drawing.Point(93, 12)
+        Me.btnPHPCS.Location = New System.Drawing.Point(93, 27)
         Me.btnPHPCS.Name = "btnPHPCS"
         Me.btnPHPCS.Size = New System.Drawing.Size(75, 23)
         Me.btnPHPCS.TabIndex = 1
         Me.btnPHPCS.Text = "PHP CS"
         Me.btnPHPCS.UseVisualStyleBackColor = True
-        '
-        'btnStatus
-        '
-        Me.btnStatus.Location = New System.Drawing.Point(174, 12)
-        Me.btnStatus.Name = "btnStatus"
-        Me.btnStatus.Size = New System.Drawing.Size(75, 23)
-        Me.btnStatus.TabIndex = 2
-        Me.btnStatus.Text = "Status"
-        Me.btnStatus.UseVisualStyleBackColor = True
-        '
-        'btnPHPStanCommit
-        '
-        Me.btnPHPStanCommit.Location = New System.Drawing.Point(255, 12)
-        Me.btnPHPStanCommit.Name = "btnPHPStanCommit"
-        Me.btnPHPStanCommit.Size = New System.Drawing.Size(98, 23)
-        Me.btnPHPStanCommit.TabIndex = 3
-        Me.btnPHPStanCommit.Text = "PHPStan Commit"
-        Me.btnPHPStanCommit.UseVisualStyleBackColor = True
-        '
-        'btnPHPCSCommit
-        '
-        Me.btnPHPCSCommit.Location = New System.Drawing.Point(359, 12)
-        Me.btnPHPCSCommit.Name = "btnPHPCSCommit"
-        Me.btnPHPCSCommit.Size = New System.Drawing.Size(97, 23)
-        Me.btnPHPCSCommit.TabIndex = 4
-        Me.btnPHPCSCommit.Text = "PHP CS Commit"
-        Me.btnPHPCSCommit.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label1.Location = New System.Drawing.Point(461, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(2, 23)
-        Me.Label1.TabIndex = 5
-        '
-        'btnSelectDir
-        '
-        Me.btnSelectDir.Location = New System.Drawing.Point(469, 12)
-        Me.btnSelectDir.Name = "btnSelectDir"
-        Me.btnSelectDir.Size = New System.Drawing.Size(75, 23)
-        Me.btnSelectDir.TabIndex = 6
-        Me.btnSelectDir.Text = "Select..."
-        Me.btnSelectDir.UseVisualStyleBackColor = True
-        '
-        'txtDirectory
-        '
-        Me.txtDirectory.Location = New System.Drawing.Point(550, 15)
-        Me.txtDirectory.Name = "txtDirectory"
-        Me.txtDirectory.Size = New System.Drawing.Size(463, 20)
-        Me.txtDirectory.TabIndex = 7
         '
         'rtbConsole
         '
@@ -111,28 +66,98 @@ Partial Class Form1
         Me.rtbConsole.BackColor = System.Drawing.Color.Black
         Me.rtbConsole.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtbConsole.ForeColor = System.Drawing.Color.White
-        Me.rtbConsole.Location = New System.Drawing.Point(12, 41)
+        Me.rtbConsole.Location = New System.Drawing.Point(12, 56)
         Me.rtbConsole.Name = "rtbConsole"
-        Me.rtbConsole.Size = New System.Drawing.Size(1178, 624)
+        Me.rtbConsole.Size = New System.Drawing.Size(1353, 609)
         Me.rtbConsole.TabIndex = 8
         Me.rtbConsole.Text = ""
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GitToolStripMenuItem, Me.AdvancedToolStripMenuItem, Me.SettingsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1377, 24)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'GitToolStripMenuItem
+        '
+        Me.GitToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusToolStripMenuItem, Me.PHPStanCommitToolStripMenuItem, Me.PHPCSCommitToolStripMenuItem})
+        Me.GitToolStripMenuItem.Name = "GitToolStripMenuItem"
+        Me.GitToolStripMenuItem.Size = New System.Drawing.Size(34, 20)
+        Me.GitToolStripMenuItem.Text = "Git"
+        '
+        'StatusToolStripMenuItem
+        '
+        Me.StatusToolStripMenuItem.Name = "StatusToolStripMenuItem"
+        Me.StatusToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.StatusToolStripMenuItem.Text = "Status"
+        '
+        'PHPStanCommitToolStripMenuItem
+        '
+        Me.PHPStanCommitToolStripMenuItem.Name = "PHPStanCommitToolStripMenuItem"
+        Me.PHPStanCommitToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.PHPStanCommitToolStripMenuItem.Text = "PHP Stan Commit"
+        '
+        'PHPCSCommitToolStripMenuItem
+        '
+        Me.PHPCSCommitToolStripMenuItem.Name = "PHPCSCommitToolStripMenuItem"
+        Me.PHPCSCommitToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.PHPCSCommitToolStripMenuItem.Text = "PHP CS Commit"
+        '
+        'AdvancedToolStripMenuItem
+        '
+        Me.AdvancedToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PHPStanCheckerToolStripMenuItem, Me.PHPCodeSnifferToolStripMenuItem})
+        Me.AdvancedToolStripMenuItem.Name = "AdvancedToolStripMenuItem"
+        Me.AdvancedToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
+        Me.AdvancedToolStripMenuItem.Text = "Advanced"
+        '
+        'PHPStanCheckerToolStripMenuItem
+        '
+        Me.PHPStanCheckerToolStripMenuItem.Name = "PHPStanCheckerToolStripMenuItem"
+        Me.PHPStanCheckerToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.PHPStanCheckerToolStripMenuItem.Text = "PHP Stan Checker"
+        '
+        'PHPCodeSnifferToolStripMenuItem
+        '
+        Me.PHPCodeSnifferToolStripMenuItem.Name = "PHPCodeSnifferToolStripMenuItem"
+        Me.PHPCodeSnifferToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.PHPCodeSnifferToolStripMenuItem.Text = "PHP Code Sniffer"
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InfoToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'InfoToolStripMenuItem
+        '
+        Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
+        Me.InfoToolStripMenuItem.Size = New System.Drawing.Size(199, 22)
+        Me.InfoToolStripMenuItem.Text = "About PHP Checks Tool"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1202, 677)
+        Me.ClientSize = New System.Drawing.Size(1377, 677)
         Me.Controls.Add(Me.rtbConsole)
-        Me.Controls.Add(Me.txtDirectory)
-        Me.Controls.Add(Me.btnSelectDir)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnPHPCSCommit)
-        Me.Controls.Add(Me.btnPHPStanCommit)
-        Me.Controls.Add(Me.btnStatus)
         Me.Controls.Add(Me.btnPHPCS)
         Me.Controls.Add(Me.btnPHPStan)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "PHP Checks Tool"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -140,12 +165,17 @@ Partial Class Form1
 
     Friend WithEvents btnPHPStan As Button
     Friend WithEvents btnPHPCS As Button
-    Friend WithEvents btnStatus As Button
-    Friend WithEvents btnPHPStanCommit As Button
-    Friend WithEvents btnPHPCSCommit As Button
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnSelectDir As Button
-    Friend WithEvents txtDirectory As TextBox
     Friend WithEvents rtbConsole As RichTextBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents GitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StatusToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PHPStanCommitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PHPCSCommitToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AdvancedToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PHPStanCheckerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PHPCodeSnifferToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InfoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
 End Class

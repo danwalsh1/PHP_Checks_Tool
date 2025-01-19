@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="FolderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>186, 17</value>
-  </metadata>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>The PHP Checks Tool is a utility designed to streamline the process of analyzing and improving PHP code. It integrates both PHPStan and PHP CodeSniffer (PHPCS) to offer static analysis and coding standard checks for your PHP projects. This tool helps identify potential bugs, enforce coding standards, and ensure code quality, making it easier for developers to maintain clean, consistent codebases.
+
+Features:
+• Perform static analysis to detect errors and potential issues in your PHP code
+• Enforce coding standards by checking for violations in your PHP code
+• Display results in a clean, easy-to-read format for better understanding
+• Receive specific error messages, warnings, and suggestions on how to improve your code</value>
+  </data>
 </root>
